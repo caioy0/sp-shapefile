@@ -43,14 +43,20 @@ function App() {
 
   // 1. Carrega o GeoJSON
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/comarcas.json`)
-      .then((response) => response.json() as Promise<ComarcasGeoJSON>)
-      .then((dadosGeoJSON) => {
+    const carregarDados = async () => {
+      try {
+        const response = await fetch(`${import.meta.env.BASE_URL}data/comarcas.json`);
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status} ao buscar comarcas.json`);
+        }
+        const dadosGeoJSON = (await response.json()) as ComarcasGeoJSON;
         setDadosGlobais(dadosGeoJSON);
-      })
-      .catch((erro) => {
+      } catch (erro) {
         console.error("Ops! Erro ao carregar o arquivo JSON:", erro);
-      });
+      }
+    };
+  
+    carregarDados();
   }, []);
 
   // 2. Inicializa o mapa
