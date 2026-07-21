@@ -21,7 +21,7 @@ export function Map({
     <main className="relative w-screen h-screen">
       {/* Menu de Filtros (Posicionado por cima do mapa usando z-index e absolute) */}
       <div 
-        className="absolute top-[15px] right-[15px] z-[1000] bg-white p-4 rounded-lg shadow-[0_4px_15px_rgba(0,0,0,0.15)] flex flex-col gap-3 w-[250px] box-border font-sans"
+        className="absolute top-3.75 right-3.75 z-1000 bg-white p-4 rounded-lg shadow-[0_4px_15px_rgba(0,0,0,0.15)] flex flex-col gap-3 w-62.5 box-border font-sans"
       >
         {/* Bloco de Entrada: Filtro por Região */}
         <div className="flex flex-col gap-1.5">

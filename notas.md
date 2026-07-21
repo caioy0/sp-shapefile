@@ -1,0 +1,1 @@
+- verificar requisicao card de cada comarca
