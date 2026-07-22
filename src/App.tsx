@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import "./App.css"; // Mantido para carregar o `@import "tailwindcss"` e estilos específicos do Leaflet
 
 // Importa o componente visual que criamos
-import { Map } from "../components/Map";
+import { Map } from "../components/map.tsx";
 
 // Importa os tipos
 import type {
